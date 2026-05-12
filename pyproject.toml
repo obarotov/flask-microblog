@@ -17,6 +17,7 @@ dependencies = [
     "flask-wtf>=1.2.2",
     "gitignore>=0.0.8",
     "moment>=0.12.1",
+    "pyjwt>=2.12.1",
     "python-dotenv>=1.2.2",
     "werkzeug<3",
 ]
