@@ -9,8 +9,10 @@ from flask_mail import Mail
 from flask_bootstrap import Bootstrap
 from flask_moment import Moment
 from config import Config
+from flask_mail import Mail
 
 app = Flask(__name__)
+mail = Mail(app)
 app.config.from_object(Config)
 
 # Initialize Extensions
