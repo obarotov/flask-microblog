@@ -11,8 +11,16 @@ from flask_moment import Moment
 from config import Config
 from flask_mail import Mail
 from flask_moment import Moment
+from flask import request
+from flask_babel import Babel
+
+def get_locale():
+    # return request.accept_languages.best_match(app.config['LANGUAGES'])
+    return 'ru'
+
 
 app = Flask(__name__)
+babel = Babel(app, locale_selector=get_locale)
 moment = Moment(app)
 mail = Mail(app)
 app.config.from_object(Config)
